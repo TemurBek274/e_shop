@@ -13,10 +13,10 @@ namespace DataAccess.ModelConfigurations
     {
         public void Configure(EntityTypeBuilder<ProductAttribute> builder)
         {
-            builder.HasKey(r => new
+            builder.HasKey(d => new
             {
-                r.ProductId,
-                r.AttributeId
+                d.ProductId,
+                d.AttributeId
             });
             builder.HasOne(pa => pa.Product)
             .WithMany(d => d.ProductAttributes)
